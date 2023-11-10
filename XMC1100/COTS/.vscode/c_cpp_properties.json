@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/COTS/HAL/LCD",
+                "${workspaceFolder}/COTS/MCAL/GPIO",
+                "${workspaceFolder}/COTS/Library/MCU",
+                "${workspaceFolder}/COTS/HAL/Seven_Segment/",
+                "${workspaceFolder}/COTS/HAL/Keypad",
+                "${workspaceFolder}/COTS/MCAL/EXIT",
+                "${workspaceFolder}/COTS/Library",
+                "${workspaceFolder}/COTS/MCAL/RCC",
+                "${workspaceFolder}/COTS/MCAL/USART",
+                "${workspaceFolder}/COTS/MCAL/NVIC",
+                "${workspaceFolder}/COTS/MCAL/SPI",
+                "${workspaceFolder}/COTS/MCAL/I2C",
+                "${workspaceFolder}/Autosar/My Implementation/Common"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

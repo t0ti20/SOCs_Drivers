@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/STM32F103C8/HAL/LCD",
+                "${workspaceFolder}/STM32F103C8/MCAL/GPIO",
+                "${workspaceFolder}/STM32F103C8/Library/MCU",
+                "${workspaceFolder}/STM32F103C8/Library/RTOS/Queue/",
+                "${workspaceFolder}/STM32F103C8/HAL/Seven_Segment/",
+                "${workspaceFolder}/STM32F103C8/HAL/Keypad",
+                "${workspaceFolder}/STM32F103C8/MCAL/EXTI",
+                "${workspaceFolder}/STM32F103C8/Library",
+                "${workspaceFolder}/STM32F103C8/MCAL/RCC",
+                "${workspaceFolder}/STM32F103C8/MCAL/USART",
+                "${workspaceFolder}/STM32F103C8/MCAL/NVIC",
+                "${workspaceFolder}/STM32F103C8/MCAL/SPI",
+                "${workspaceFolder}/STM32F103C8/MCAL/I2C"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

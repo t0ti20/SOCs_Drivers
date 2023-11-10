@@ -1,0 +1,20 @@
+/* Generate Object Files */
+arm-none-eabi-gcc -c -mcpu=arm926ej-s -g Application.c -o Application.o
+/*Use Assembler*/
+arm-none-eabi-as -mcpu=arm926ej-s Startup.s -o Startup.o
+/*Disassimble*/
+arm-none-eabi-objdump -D Application.o
+/*Sections*/
+arm-none-eabi-objdump -h Application.o
+/*Linker*/
+arm-none-eabi-ld -T Linker_Script.ld Application.o Startup.o UART.o -o Application.elf
+/*Show Symbols*/
+arm-none-eabi-nm Application.o
+/*Map File*/
+arm-none-eabi-ld -T Linker_Script.ld -Map=Sections.map Application.o Startup.o UART.o -o Application.elf
+/*Generate Hex File*/
+arm-none-eabi-objcopy -O binary Application.elf Application.bin
+/*Read ELF File*/
+arm-none-eabi-readelf -a Application.elf
+/*Run Simulation*/
+qemu-system-arm.exe -M versatilepb -m 128M -nographic -kernel Applicahion.bin
