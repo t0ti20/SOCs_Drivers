@@ -37,6 +37,7 @@ OBJ=$(SRC:.c=.o) $(SRS:.s=.o)
 ##################################################
 ################# Main Methouds ##################
 ##################################################
+.PHONY: clean
 all: $(Application).hex $(Application).bin
 	@echo "========== Build Finished ========="
 #*******************************************************************
@@ -44,6 +45,8 @@ all: $(Application).hex $(Application).bin
 #Compile And Assimble C Files Files
 %.o:%.c
 	@$(CC)gcc $(CFLAGS) -c $< $(INCS) -o $(Build)/$(notdir $@)
+#*******************************************************************
+#*******************************************************************
 #Assimble Assimply Files
 %.o:%.s
 	@$(CC)as $(AFLAGS) $< -o $(Build)/$(notdir $@)
@@ -52,22 +55,28 @@ all: $(Application).hex $(Application).bin
 #Link All Files And Generate ELF File
 $(Application).elf: $(OBJ)
 	@$(CC)gcc $(Build)/*.o $(INCS) $(LFLAGS) -T $(SRL) $(LIBS) -o $(Build)/$@ 
+#*******************************************************************
+#*******************************************************************
 #Generate Hex File
 $(Application).hex: $(Application).elf
 	@$(CC)objcopy -O ihex $(Build)/$< $(Build)/$@ 
 	@cp $(Build)/$(Application).elf $(Build)/$(Application).axf 
+#*******************************************************************
+#*******************************************************************
 #Generate Binary File
 $(Application).bin: $(Application).elf
 	@$(CC)objcopy -O binary $(Build)/$< $(Build)/$@ 
 #*******************************************************************
 #*******************************************************************
 #Clean All Files
+.PHONY: clean
 clean: 
 	@rm -f -r $(Build)/*
 	@echo "========= Cleaning Finished ========"
 #*******************************************************************
 #*******************************************************************
 #Flash On Board
+.PHONY: flash
 flash: all
 	@sudo chmod -R 777 /dev/bus/usb/
 	@st-flash write $(Build)/$(Application).bin 0x08000000 > /dev/null 2>&1
@@ -75,6 +84,7 @@ flash: all
 #*******************************************************************
 #*******************************************************************
 #Erase The Flash 
+.PHONY: erase
 erase:
 	@sudo chmod -R 777 /dev/
 	@st-flash erase > /dev/null 2>&1
