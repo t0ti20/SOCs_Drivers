@@ -38,7 +38,6 @@
 /*--------------------------------------*/
 /* 0x40000000 >>>>>>>>>>>>>> 0x4000FFFF */
 /*--------------- APB1 -----------------*/
-
 #define TIM2_Offset                     (0x00000UL)
 #define SPI2_Offset                     (0x03800UL)
 #define SPI3_Offset                     (0x03C00UL)
@@ -237,6 +236,8 @@ typedef struct FLASH_t
      Register_t OBR;                    /*0x1C*/
      Register_t WRPR;                   /*0x20*/
 }FLASH_t;
+/*-------------- DBGMCU ---------------*/
+#define UNIQUE_DEVICE_ID_REGISTER       (*((volatile u32*)(0x1FFFF7E8)))
 /****************************************
  *         Pheripheral Instants         *
 *****************************************/

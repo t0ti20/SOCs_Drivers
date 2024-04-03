@@ -11,11 +11,12 @@
                 "${workspaceFolder}/MCAL/NVIC",
                 "${workspaceFolder}/Library/Bootloader",
                 "${workspaceFolder}/MCAL/CRC",
-                "${workspaceFolder}/MCAL/FLASH"
+                "${workspaceFolder}/MCAL/FLASH",
+                "${workspaceFolder}/Application"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c17",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-clang-x64"
         }

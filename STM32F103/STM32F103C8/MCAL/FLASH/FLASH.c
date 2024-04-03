@@ -45,14 +45,14 @@ static void FLASH_Lock(void)
 *****************************************************************************************/
 static FLASH_State_t FLASH_Unlock(void)
 {
-     FLASH_State_t Status=Bootloader_State_Ok;
+     FLASH_State_t Status=Flash_State_Ok;
      /*Unlock Flash*/
      FLASH.KEYR.Register=KEY1;
      FLASH.KEYR.Register=KEY2;
      /*Check If Its Unloked*/
      if(FLASH.CR.Bits.Bit_7)
      {
-          Status=Bootloader_State_Error;
+          Status=Flash_State_Error;
      }
      else{}
      return Status;
@@ -74,7 +74,7 @@ static FLASH_State_t FLASH_Unlock(void)
 *****************************************************************************************/
 static FLASH_State_t Flash_Erase_Page(u32 pageAddress)
 {
-     FLASH_State_t Status=Bootloader_State_Ok;
+     FLASH_State_t Status=Flash_State_Ok;
      /*Ensure no flash operation is ongoing*/
      while (FLASH.SR.Bits.Bit_0);
      /*Set the PER (Page Erase) bit in the Flash control register*/
@@ -91,7 +91,7 @@ static FLASH_State_t Flash_Erase_Page(u32 pageAddress)
           /*Clear the error flags*/
           FLASH.SR.Bits.Bit_2=Enable;
           FLASH.SR.Bits.Bit_4=Enable;
-          Status=Bootloader_State_Error;
+          Status=Flash_State_Error;
      }
      else
      {
@@ -118,7 +118,7 @@ static FLASH_State_t Flash_Erase_Page(u32 pageAddress)
 *****************************************************************************************/
 static FLASH_State_t FLASH_Halfword_Write(u32 Address,u16 Data)
 {
-     FLASH_State_t Status=Bootloader_State_Ok;
+     FLASH_State_t Status=Flash_State_Ok;
      /*Enable the half word program option*/
      FLASH.CR.Bits.Bit_0=Enable;
      /*Write the half-word data to the desired address*/
@@ -127,7 +127,7 @@ static FLASH_State_t FLASH_Halfword_Write(u32 Address,u16 Data)
      while(FLASH.SR.Bits.Bit_0){}
      /*Check for error conditions*/
      if((*(volatile u16*)Address)==Data){FLASH.CR.Bits.Bit_0=Disable;}
-     else{Status=Bootloader_State_Error;}
+     else{Status=Flash_State_Error;}
      return Status;
 }
 
@@ -149,10 +149,10 @@ static FLASH_State_t FLASH_Halfword_Write(u32 Address,u16 Data)
 *****************************************************************************************/
 FLASH_State_t Flash_Erase_Pages(u8 Start_Page,u8 Pages_Number)
 {
-     FLASH_State_t Status=Bootloader_State_Ok;
+     FLASH_State_t Status=Flash_State_Ok;
      u32 Page_Counter=(Flash_Start+(Start_Page*Flash_Page_Size));
      Status=FLASH_Unlock();
-     for(;(Pages_Number>ZERO)&&(Bootloader_State_Ok==Status);Pages_Number--)
+     for(;(Pages_Number>ZERO)&&(Flash_State_Ok==Status);Pages_Number--)
      {
           Status=Flash_Erase_Page(Page_Counter);
           Page_Counter+=Flash_Page_Size;
@@ -183,17 +183,17 @@ FLASH_State_t Flash_Erase_Pages(u8 Start_Page,u8 Pages_Number)
 FLASH_State_t Flash_Write_Pages(u8 Start_Page,u16 Data[],u32 Data_Size)
 {
      u32 Counter=ZERO;
-     FLASH_State_t Status=Bootloader_State_Ok;
+     FLASH_State_t Status=Flash_State_Ok;
      u32 Address_Pointer=(Flash_Start+(Start_Page*Flash_Page_Size));
      /*Erase Pages To Be Able To Write*/
      Flash_Erase_Pages(Start_Page,(u8)(Data_Size/Flash_Page_Size)+ONE);
      Status=FLASH_Unlock();
-     for(Counter=ZERO;(Counter<Data_Size)&&(Status==Bootloader_State_Ok);Counter++,Address_Pointer+=FOUR)
+     for(Counter=ZERO;(Counter<Data_Size)&&(Status==Flash_State_Ok);Counter++,Address_Pointer+=FOUR)
      {
           /*Write the first halfword (lower 16 bits of Data[Counter])*/
           Status=FLASH_Halfword_Write(Address_Pointer,(Data[Counter]));
           /*Write the second halfword (upper 16 bits of Data[Counter])*/
-          if(Status==Bootloader_State_Ok){Status=FLASH_Halfword_Write(Address_Pointer+2,(u16)(Data[Counter]>>16));}
+          if(Status==Flash_State_Ok){Status=FLASH_Halfword_Write(Address_Pointer+2,(u16)(Data[Counter]>>16));}
           else{break;}
      }
      FLASH_Lock();

@@ -7,7 +7,7 @@
           {
                "preLaunchCommands": [],
                "cwd": "${workspaceRoot}",
-               "executable": "/home/t0ti20/Desktop/VS-Code/GitHub/My_Implementation/MicroControllers/STM32F103/STM32F103C8/Build/STM32F103C8.elf",
+               "executable": "${workspaceFolder}/Build/STM32F103C8.elf",
                "name": "Debug with OpenOCD",
                "request": "launch",
                "type": "cortex-debug",

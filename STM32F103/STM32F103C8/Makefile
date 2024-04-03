@@ -78,7 +78,7 @@ clean:
 #Flash On Board
 .PHONY: flash
 flash: all
-	@sudo chmod -R 777 /dev/bus/usb/
+	@if [ ! -w /dev/bus/usb ]; then sudo chmod -R 777 /dev/bus/usb; fi
 	@st-flash write $(Build)/$(Application).bin 0x08000000 > /dev/null 2>&1
 	@echo "========= Flashing Finished ======="
 #*******************************************************************

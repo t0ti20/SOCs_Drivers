@@ -27,7 +27,7 @@ void USART_Send_Array(USART_Config_t *USART_Config,u8 Array[],u8 Size)
 {
      while(Size)
      {
-          USART_Transmit(USART_Config,Array[Size--]);
+          USART_Transmit(USART_Config,Array[--Size]);
      }
 }
 void USART_Send_String(USART_Config_t *USART_Config,const u8 String[])
@@ -155,19 +155,27 @@ u16 USART_Receive(USART_Config_t *USART_Config)
           case USART_3:USART_Number=&USART3;break;
      }
      /*Interrupt Is Disabled*/
-          while(!(USART_Number->SR.Bits.Bit_5));
+     while(!(USART_Number->SR.Bits.Bit_5));
      /*9 Bit Data No Parity*/
      if((USART_Config->USART_Length==USART_Nine_Bits)&&(USART_Config->USART_Parity==USART_No_Parity))
+     {
           Data=USART_Number->DR.Register&0x1ff;
+     }
      /*9 Bit Data With Parity*/
      else if((USART_Config->USART_Length==USART_Nine_Bits)&&!(USART_Config->USART_Parity==USART_No_Parity))
+     {
           Data=(USART_Number->DR.Register)&0xff;
+     }
      /*8 Bit Data No Parity*/
      else if((USART_Config->USART_Length==USART_Eight_Bits)&&(USART_Config->USART_Parity==USART_No_Parity))
+     {
           Data=(USART_Number->DR.Register)&0xff;
+     }
      /*8 Bit Data With Parity*/
      else if((USART_Config->USART_Length==USART_Eight_Bits)&&!(USART_Config->USART_Parity==USART_No_Parity))
+     {
           Data=(USART_Number->DR.Register)&0x7f;
+     }
      return Data;
 }
 /********************************************************************

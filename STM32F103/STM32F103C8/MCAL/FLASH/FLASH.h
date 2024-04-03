@@ -25,8 +25,8 @@
 /*------------- Flash State ------------*/
 typedef enum FLASH_State_t
 {
-     Bootloader_State_Ok              =(0),
-     Bootloader_State_Error           =(1)
+     Flash_State_Ok              =(0),
+     Flash_State_Error           =(1)
 }FLASH_State_t;
 /*****************************************
 ---  Application Programming Interface  --
