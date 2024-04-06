@@ -14,11 +14,11 @@ Build=./Build
 #Compiler Name
 CC=arm-none-eabi-
 #Compiler Flags
-CFLAGS = -gdwarf-4 -mcpu=cortex-m3 -mthumb -O0 -g
+CFLAGS = -O0 -gdwarf-4 -mcpu=cortex-m3 -mthumb -ffunction-sections -fdata-sections -g
 #Asseember Flags
-AFLAGS=  -gdwarf-4
+AFLAGS= -gdwarf-4 -g
 #Linker Flags
-LFLAGS= -gdwarf-4 -O0 --std=gnu99 -mthumb -mcpu=cortex-m3 --specs=nosys.specs -g
+LFLAGS= -O0 -gdwarf-4 --std=gnu99 -mthumb -mcpu=cortex-m3 --specs=nosys.specs -Wl,--gc-sections -g
 #External Include Directories
 INCS=
 # INCS+=-I /usr/lib/arm-none-eabi/include
@@ -26,6 +26,8 @@ INCS=
 LIBS=
 # LIBS+=-L /usr/lib/arm-none-eabi/lib
 # LIBS+=-L /usr/lib/arm-none-eabi/newlib
+#Flash Memory
+FLASH_Address = 0x08000000
 ##################################################
 ################### Variables ####################
 ##################################################
@@ -78,8 +80,8 @@ clean:
 #Flash On Board
 .PHONY: flash
 flash: all
-	@if [ ! -w /dev/bus/usb ]; then sudo chmod -R 777 /dev/bus/usb; fi
-	@st-flash write $(Build)/$(Application).bin 0x08000000 > /dev/null 2>&1
+	@if [ ! -w /dev/bus/usb ];then sudo chmod -R 777 /dev/bus/usb;fi
+	@st-flash write $(Build)/$(Application).bin ${FLASH_Address} > /dev/null 2>&1
 	@echo "========= Flashing Finished ======="
 #*******************************************************************
 #*******************************************************************
@@ -91,14 +93,15 @@ erase:
 	@echo "========= Erasing Finished ========"
 #*******************************************************************
 #*******************************************************************
+FLASH_Page_Size_Bytes = 1024
+Total_Pages = 127
 # Read The Flash 
-FLASH_Address = 0x08000000
 .PHONY: read do_read
 read:
-	@PAGE_NUMBER=$(word 2,$(MAKECMDGOALS)) SIZE_PAGES=$(word 3,$(MAKECMDGOALS)) make -C . do_read
+	@make -C . do_read SIZE_PAGES=$(Total_Pages)
 do_read:
-	@st-flash read ./Build/FLASH.bin $$(printf "0x%08x" $$(( $(FLASH_Address) + ($$PAGE_NUMBER * 1024) ))) $$(($$SIZE_PAGES * 1024))
 	@sudo chmod -R 777 ./Build/
+	@st-flash read ./Build/FLASH.bin 0x08000000 $(shell expr $(FLASH_Page_Size_Bytes) \* $(Total_Pages)) > /dev/null 2>&1
 	@echo "========= Reading Finished ========"
 #*******************************************************************
 #*******************************************************************

@@ -19,21 +19,45 @@ static u8 SW_Major_Version=Basic_SW_Major_Version;
 static u8 SW_Minor_Version=Basic_SW_Minor_Version;
 static USART_Config_t UART_ONE={NULL,USART_1,USART_No_Parity,USART_Rx_Tx,Disable,USART_Eight_Bits,USART_One_Stop,USART_115200,USART_Disable_Interrupt};
 /*****************************************
----  Application Programming Interface  --
+-----------  Static Functions  -----------
 *****************************************/
-static void Bootloader_Send_ACK(u8 Data_Length)
+
+static void Start_Application(volatile u32 *Application_Address)
+{		
+	void (*Application_Reset)(void);
+	#ifdef ENABLE_DEBUG
+	Bootloader_Send_Message("Starting User Application\n",Data_Length);
+	#endif
+	/* Application Stack Pointer */
+	SET_MSP(Application_Address[0]);
+	/* Application Reset Handler */
+	Application_Reset=(void *)Application_Address[1];
+	/* Deinitialization Of All Modules */
+	/* Jump To Application */
+	Application_Reset();
+}
+static void Bootloader_Send_ACK()
 {		
 	#ifdef ENABLE_DEBUG
-	Bootloader_Send_Message("Sending Ack + Size Of %d Bytes\n",Data_Length);
+	Bootloader_Send_Message("Sending Ack \n",Data_Length);
 	#endif
 	USART_Transmit(&UART_ONE,(u16)Bootloader_State_ACK);
+}
+static void Bootloader_Send_Frame(u8 Data_Length)
+{	
+	Bootloader_Send_ACK();
+	#ifdef ENABLE_DEBUG
+	Bootloader_Send_Message("Sending Size Of %d Bytes\n",Data_Length);
+	#endif
 	USART_Transmit(&UART_ONE,(u16)Data_Length);
 }
+
+/****************************************/
 static void Bootloader_Send_NACK(void)
 {
 	USART_Transmit(&UART_ONE,(u16)Bootloader_State_NACK);
 }
-
+/****************************************/
 static logic_t Bootloader_CRC_Check(void)
 {
 	u32 Actual_CRC=ZERO;
@@ -52,18 +76,20 @@ static logic_t Bootloader_CRC_Check(void)
     }
 	return (*((u32*)(UART_Buffer+(UART_Buffer[ZERO]-THREE))))==Actual_CRC?TRUE:FALSE;
 }
+/****************************************/
 static void Bootloader_Send_Version(void)
 {
 	u8 Message[3]={Chip_ID,SW_Major_Version,SW_Minor_Version};
-	Bootloader_Send_ACK(THREE);
+	Bootloader_Send_Frame(THREE);
 	#ifdef ENABLE_DEBUG
 	Bootloader_Send_Message("Done Sending 3 Elements Of Vesrion\n");
 	#endif
 	USART_Send_Array(&UART_ONE,Message,THREE);
 }
+/****************************************/
 static void Bootloader_Erase_Flash(void)
 {
-	Bootloader_Send_ACK(ONE);
+	Bootloader_Send_Frame(ONE);
 	if(Flash_State_Ok==Flash_Erase_Pages(Bootloader_Total_Pages,(128-Bootloader_Total_Pages)))
 	{
 		USART_Transmit(&UART_ONE,Bootloader_State_Successful_Erase);
@@ -73,28 +99,27 @@ static void Bootloader_Erase_Flash(void)
 		USART_Transmit(&UART_ONE,Bootloader_State_Unsuccessful_Erase);
 	}
 }
-
+/****************************************/
 static void Bootloader_Send_ID(void)
 {
 	volatile u32 *Variable=&UNIQUE_DEVICE_ID_REGISTER;
-	Bootloader_Send_ACK(12);
+	Bootloader_Send_Frame(12);
 	USART_Send_Array(&UART_ONE,(u8*)Variable,12);
 }
-
+/****************************************/
 static void Bootloader_Send_Help(void)
 {
-	u8 Message[Total_Services]={Bootloader_Command_Send_Help,Bootloader_Command_Send_ID,Bootloader_Command_Send_Version,Bootloader_Command_Erase_Flash,Bootloader_Command_Write_Flash};
-	Bootloader_Send_ACK(Total_Services);
+	u8 Message[]={Bootloader_Command_Send_Help,Bootloader_Command_Send_ID,Bootloader_Command_Send_Version,Bootloader_Command_Erase_Flash,Bootloader_Command_Write_Flash,Bootloader_Command_Address_Jump};
+	Bootloader_Send_Frame(Total_Services);
 	USART_Send_Array(&UART_ONE,Message,Total_Services);
 	#ifdef ENABLE_DEBUG
 	Bootloader_Send_Message("Done Sending Help\n");
 	#endif
-} 
-
+}
+/****************************************/
 static void Bootloader_Write_Flash(void)
 {
-	Bootloader_Send_ACK(ONE);
-	
+	Bootloader_Send_Frame(ONE);
 	if(Bootloader_State_OK==Flash_Write_Pages(Bootloader_Total_Pages,(u16*)(&UART_Buffer[TWO]),UART_Buffer[TWO]-FIVE))
 	{
 		USART_Transmit(&UART_ONE,Bootloader_State_Successful_Write);
@@ -104,7 +129,17 @@ static void Bootloader_Write_Flash(void)
 		USART_Transmit(&UART_ONE,Bootloader_State_Unsuccessful_Write);
 	}
 }
-
+/****************************************/
+static void Bootloader_Address_Jump(void)
+{
+	/* Get Jumping Address */
+	Bootloader_Send_ACK();
+	#ifdef ENABLE_DEBUG
+	Bootloader_Send_Message("Done Jumping To Address\n");
+	#endif
+	Start_Application((u32 *)(*((u32 *)&UART_Buffer[2])));
+}
+/****************************************/
 static Bootloader_State_t Bootloader_Check_Command(void)
 {
 	Bootloader_State_t Return=Bootloader_State_OK;
@@ -115,14 +150,20 @@ static Bootloader_State_t Bootloader_Check_Command(void)
 		case Bootloader_Command_Send_ID:Bootloader_Send_ID();break;
 		case Bootloader_Command_Erase_Flash:Bootloader_Erase_Flash();break;
 		case Bootloader_Command_Write_Flash:Bootloader_Write_Flash();break;
+		case Bootloader_Command_Address_Jump:Bootloader_Address_Jump();break;
 		default : Return=Bootloader_State_Wrong_Command;break;
 	}
 	return Return;
 }
-
+/*****************************************
+-----------  Static Functions  -----------
+*****************************************/
 Bootloader_State_t Bootloader_Receive_Command(void)
 {
 	Bootloader_State_t Return=Bootloader_State_OK;
+	/* ------------------------- */
+	//Start_Application(Application_Base);
+	/* ------------------------- */
 	u8 Frame_Length=ZERO;
 	/* Receive Frame Size */
 	UART_Buffer[ZERO]=(u8)USART_Receive(&UART_ONE);
@@ -150,7 +191,7 @@ Bootloader_State_t Bootloader_Receive_Command(void)
 	}
 	return Return;
 }
-
+/****************************************/
 void Bootloader_Send_Message(const u8 *Message,...)
 {
 	u8 Message_Buffer[Maximum_Buffer_Size]={};
@@ -160,7 +201,7 @@ void Bootloader_Send_Message(const u8 *Message,...)
 	USART_Send_String(&UART_ONE,(const u8 *)Message_Buffer);
 	va_end(Arguments);
 }
-
+/****************************************/
 void Bootloader_Initialize(void)
 {
 	USART_Initialization(&UART_ONE);

@@ -31,6 +31,7 @@ __attribute__((noreturn)) void UsageFault_Handler(void);
 #define Move_From_Register(Value, Register)       __asm volatile ("STR "#Register",%[Output]":[Output]"=m"(Value))
 #define Move_To_Register(Register,Value)          __asm volatile ("LDR "#Register",%[Argument]"::[Argument]"m"(Value))
 #define SET_PSP(Task_Address)			          __asm volatile ("MSR PSP,%[Variable]"::[Variable]"r"(Task_Address))
+#define SET_MSP(Task_Address)                     __asm volatile ("MSR MSP,%[Variable]"::[Variable]"r"(Task_Address))
 #define GET_PSP(Task_Address)			          __asm volatile ("MRS %[Variable],PSP":[Variable]"=r"(Task_Address))
 #define GET_XPSR(Variable)		               __asm volatile ("MRS %[Argument],XPSR":[Argument]"=r"(Variable))
 #define Switch_MSP					          __asm volatile ("MRS R0,CONTROL\n\tBFC R0,#1,#1\n\tMSR CONTROL,R0":::"r0")

@@ -10,7 +10,6 @@
 -----------     INCLUDES     -------------
 *****************************************/
 #include "Application.h"
-#include "USART_Interface.h"
 void Test(void);
 /*****************************************
 ----------    GLOBAL DATA     ------------
@@ -21,13 +20,8 @@ int main(void)
 	int counter=0;
 	while (1)
 	{
-		//Bootloader_Send_Message("%d",counter++);
 		Test();
 		Bootloader_Receive_Command();
-		//Bootloader_Send_Message((const u8 *)"\033[2J\033[H");
-		
-		//Flash_Write_Pages(64,Data,5);
-		//Bootloader_Send_Message((const u8 *)"- Hello Bootloader ! (%c)\n",(u8)USART_Receive(&UART_ONE));
 	}
 }
 /****************************************/
