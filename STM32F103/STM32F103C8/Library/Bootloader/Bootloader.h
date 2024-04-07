@@ -25,10 +25,14 @@
 #define Chip_ID_Number                  (123)
 #define Basic_SW_Major_Version          (0)
 #define Basic_SW_Minor_Version          (0)
-#define Maximum_Buffer_Size             (250)
+#define Maximum_Buffer_Size             (255)
 #define Bootloader_Total_Pages          (32)
 #define Total_Services                  (6)
-#define Application_Base 			((volatile u32 *)(0x8008000U))
+#define Application_Page                (32)
+#define Memory_Base                     (0x8000000U)
+#define Memory_Size                     (0x20000U)
+#define Application_Base 			((volatile u32 *)((Memory_Base)+(Application_Page*1024)))
+
 /*****************************************
 -------    Macro Like Function    --------
 *****************************************/

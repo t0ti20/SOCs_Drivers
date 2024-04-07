@@ -116,21 +116,24 @@ static FLASH_State_t Flash_Erase_Page(u32 pageAddress)
 *                          the write operation to complete, and then checks if the write was successful.
 * Available via          : FLASH.c
 *****************************************************************************************/
-static FLASH_State_t FLASH_Halfword_Write(u32 Address,u16 Data)
+static FLASH_State_t FLASH_Halfword_Write(u32 Address, u16 Data)
 {
      FLASH_State_t Status=Flash_State_Ok;
-     /*Enable the half word program option*/
-     FLASH.CR.Bits.Bit_0=Enable;
-     /*Write the half-word data to the desired address*/
-     *(volatile u16*)Address=Data;
-     /*Wait until the flash is ready*/
-     while(FLASH.SR.Bits.Bit_0){}
-     /*Check for error conditions*/
-     if((*(volatile u16*)Address)==Data){FLASH.CR.Bits.Bit_0=Disable;}
-     else{Status=Flash_State_Error;}
+     /* Enable the half-word program option (set Bit_0 in FLASH_CR register) */
+     FLASH.CR.Bits.Bit_0=1;
+     /* Write the half-word data to the desired address */
+     (*(volatile u16 *)Address)= Data;
+     /* Wait until the flash is ready (wait until BSY bit in FLASH_SR register is cleared) */
+     while (FLASH.SR.Bits.Bit_0){}
+     /* Check for error conditions */
+     if ((*(volatile u16 *)Address)!=Data)
+     {
+          Status=Flash_State_Error;
+     }
+     /* Disable the half-word program option (clear Bit_0 in FLASH_CR register) */
+     FLASH.CR.Bits.Bit_0 = 0;
      return Status;
 }
-
 /*****************************************************************************************
 * Service Name           : Flash_Erase_Pages
 * Syntax                 : FLASH_State_t Flash_Erase_Pages(u8 Start_Page, u8 Pages_Number)
@@ -160,7 +163,6 @@ FLASH_State_t Flash_Erase_Pages(u8 Start_Page,u8 Pages_Number)
      FLASH_Lock();
      return Status;
 }
-
 /*****************************************************************************************
 * Service Name           : Flash_Write_Pages
 * Syntax                 : FLASH_State_t Flash_Write_Pages(u8 Start_Page, u32 Data[], u32 Data_Size)
@@ -180,26 +182,30 @@ FLASH_State_t Flash_Erase_Pages(u8 Start_Page,u8 Pages_Number)
 *                          value as two halfwords.
 * Available via          : FLASH.c
 *****************************************************************************************/
-FLASH_State_t Flash_Write_Pages(u8 Start_Page,u16 Data[],u32 Data_Size)
+FLASH_State_t Flash_Write_Page(u8 Start_Page,u32 Data[]) 
 {
-     u32 Counter=ZERO;
-     FLASH_State_t Status=Flash_State_Ok;
-     u32 Address_Pointer=(Flash_Start+(Start_Page*Flash_Page_Size));
-     /*Erase Pages To Be Able To Write*/
-     Flash_Erase_Pages(Start_Page,(u8)(Data_Size/Flash_Page_Size)+ONE);
-     Status=FLASH_Unlock();
-     for(Counter=ZERO;(Counter<Data_Size)&&(Status==Flash_State_Ok);Counter++,Address_Pointer+=FOUR)
+     u16 Counter = ZERO;
+     FLASH_State_t Status = Flash_State_Ok;
+     u32 Address_Pointer = (Flash_Start + (Start_Page * Flash_Page_Size));
+     /* Unlock flash for write operations */
+     Status = FLASH_Unlock();
+     /* Loop through the data and write to flash memory */
+     for (Counter=ZERO;Counter<(Flash_Page_Size/FOUR)&&(Status==Flash_State_Ok);Counter++,Address_Pointer+=FOUR)
      {
-          /*Write the first halfword (lower 16 bits of Data[Counter])*/
-          Status=FLASH_Halfword_Write(Address_Pointer,(Data[Counter]));
-          /*Write the second halfword (upper 16 bits of Data[Counter])*/
-          if(Status==Flash_State_Ok){Status=FLASH_Halfword_Write(Address_Pointer+2,(u16)(Data[Counter]>>16));}
-          else{break;}
+          /* Write the lower 16 bits of Data[Counter] */
+          Status = FLASH_Halfword_Write(Address_Pointer,(u16)(Data[Counter] & 0xFFFF));
+          /* Check if the lower 16 bits were written successfully before writing upper 16 bits */
+          if (Status == Flash_State_Ok)
+          {
+               /* Write the upper 16 bits of Data[Counter] */
+               Status = FLASH_Halfword_Write(Address_Pointer+2,(u16)(Data[Counter]>>16));
+          }
+          else {break;}
      }
+     /* Lock flash after write operations */
      FLASH_Lock();
      return Status;
 }
-
 /********************************************************************
  *  END OF FILE:  FLASH.c
 ********************************************************************/

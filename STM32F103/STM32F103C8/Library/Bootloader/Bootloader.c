@@ -89,14 +89,17 @@ static void Bootloader_Send_Version(void)
 /****************************************/
 static void Bootloader_Erase_Flash(void)
 {
-	Bootloader_Send_Frame(ONE);
-	if(Flash_State_Ok==Flash_Erase_Pages(Bootloader_Total_Pages,(128-Bootloader_Total_Pages)))
+	if((UART_Buffer[2]>=32)&&(UART_Buffer[3]<128))
 	{
-		USART_Transmit(&UART_ONE,Bootloader_State_Successful_Erase);
+		if(Flash_State_Ok==Flash_Erase_Pages(UART_Buffer[2],UART_Buffer[3]))
+		{
+			Bootloader_Send_ACK();
+		}
+		else{Bootloader_Send_NACK();}
 	}
 	else
 	{
-		USART_Transmit(&UART_ONE,Bootloader_State_Unsuccessful_Erase);
+		Bootloader_Send_NACK();
 	}
 }
 /****************************************/
@@ -117,27 +120,95 @@ static void Bootloader_Send_Help(void)
 	#endif
 }
 /****************************************/
-static void Bootloader_Write_Flash(void)
+static Bootloader_State_t Bootloader_Receive_Payload(void)
 {
-	Bootloader_Send_Frame(ONE);
-	if(Bootloader_State_OK==Flash_Write_Pages(Bootloader_Total_Pages,(u16*)(&UART_Buffer[TWO]),UART_Buffer[TWO]-FIVE))
+	Bootloader_State_t Return=Bootloader_State_OK;
+	u8 Frame_Length=ZERO;
+	/* Receive Frame Size */
+	UART_Buffer[ZERO]=(u8)USART_Receive(&UART_ONE);
+	/* Receive Whole Frame */
+	for(Frame_Length=ONE;Frame_Length<=UART_Buffer[ZERO];Frame_Length++)
 	{
-		USART_Transmit(&UART_ONE,Bootloader_State_Successful_Write);
+		UART_Buffer[Frame_Length]=(u8)USART_Receive(&UART_ONE);
+	}
+	#ifdef ENABLE_DEBUG
+		Bootloader_Send_Message("Recevig Payload Done\n");
+	#endif
+	if(TRUE==Bootloader_CRC_Check())
+	{
+		#ifdef ENABLE_DEBUG
+			Bootloader_Send_Message("CRC Payload Passed\n");
+		#endif
+		Return=Bootloader_State_OK;
 	}
 	else
 	{
-		USART_Transmit(&UART_ONE,Bootloader_State_Unsuccessful_Write);
+		#ifdef ENABLE_DEBUG
+		Bootloader_Send_Message("CRC Failed\n");
+		#endif
+		Bootloader_Send_NACK();
 	}
+	return Return;
 }
+static Bootloader_State_t Bootloader_Write_Flash(void)
+{
+	u8 Page_Buffer[1024]={};
+	Bootloader_State_t Status=Bootloader_State_OK;
+	u8 Total_Payload_Frames=UART_Buffer[3];
+	u8 Writing_Page=UART_Buffer[2];
+	u8 Current_Frame=ZERO;
+	u16 Page_Byte_Count=ZERO;
+	if(Flash_Erase_Pages(Writing_Page,(((250*Total_Payload_Frames)/1024)+1))==Flash_State_Ok)
+	{
+		Bootloader_Send_ACK();
+		while(Current_Frame<Total_Payload_Frames)
+		{
+			if(Bootloader_Receive_Payload()==Bootloader_State_OK)
+			{
+				Bootloader_Send_ACK();
+				for(u8 Counter=ONE;Counter<UART_Buffer[0]-THREE;Counter++)
+				{
+					Page_Buffer[Page_Byte_Count++]=UART_Buffer[Counter];
+					if((Page_Byte_Count==1024)||((Current_Frame==Total_Payload_Frames-ONE)&&(Counter==UART_Buffer[0]-FOUR)))
+					{
+						if(Flash_Write_Page(Writing_Page,(u32 *)Page_Buffer)==Flash_State_Ok)
+						{
+							Writing_Page++;
+							Page_Byte_Count=ZERO;
+						}
+						else{Status=Bootloader_State_Unsuccessful_Write;}
+					}
+				}
+				Current_Frame++;
+			}
+			else{Bootloader_Send_NACK();}
+		}
+	}
+	else
+	{
+		Bootloader_Send_NACK();
+	}
+	return Status;
+}
+
 /****************************************/
 static void Bootloader_Address_Jump(void)
 {
 	/* Get Jumping Address */
-	Bootloader_Send_ACK();
-	#ifdef ENABLE_DEBUG
-	Bootloader_Send_Message("Done Jumping To Address\n");
-	#endif
-	Start_Application((u32 *)(*((u32 *)&UART_Buffer[2])));
+	u32 *Jumping_Address=((u32 *)(*((u32 *)&UART_Buffer[2])));
+	/* Check If Valid To Jumb */
+	if(((u32)Jumping_Address>Memory_Base)&&((u32)Jumping_Address<(Memory_Base+Memory_Size)))
+	{
+		Bootloader_Send_ACK();
+		Start_Application(Jumping_Address);
+		#ifdef ENABLE_DEBUG
+			Bootloader_Send_Message("Done Jumping To Address\n");
+		#endif
+	}
+	else
+	{
+		Bootloader_Send_NACK();
+	}
 }
 /****************************************/
 static Bootloader_State_t Bootloader_Check_Command(void)
@@ -161,9 +232,6 @@ static Bootloader_State_t Bootloader_Check_Command(void)
 Bootloader_State_t Bootloader_Receive_Command(void)
 {
 	Bootloader_State_t Return=Bootloader_State_OK;
-	/* ------------------------- */
-	//Start_Application(Application_Base);
-	/* ------------------------- */
 	u8 Frame_Length=ZERO;
 	/* Receive Frame Size */
 	UART_Buffer[ZERO]=(u8)USART_Receive(&UART_ONE);

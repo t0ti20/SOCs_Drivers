@@ -154,7 +154,7 @@ u16 USART_Receive(USART_Config_t *USART_Config)
           case USART_2:USART_Number=&USART2;break;
           case USART_3:USART_Number=&USART3;break;
      }
-     /*Interrupt Is Disabled*/
+     /*Wait until data is received (wait for RXNE bit in SR register)*/
      while(!(USART_Number->SR.Bits.Bit_5));
      /*9 Bit Data No Parity*/
      if((USART_Config->USART_Length==USART_Nine_Bits)&&(USART_Config->USART_Parity==USART_No_Parity))
