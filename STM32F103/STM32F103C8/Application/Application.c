@@ -15,13 +15,12 @@ void Test(void);
 ----------    GLOBAL DATA     ------------
 *****************************************/
 int main(void) 
-{	
+{
 	System_Initialization();
-	int counter=0;
+	Test();
 	while (1)
 	{
-		Test();
-		Bootloader_Receive_Command();
+		Bootloader_Start();
 	}
 }
 /****************************************/
@@ -29,17 +28,8 @@ void Test(void)
 {
 	MCAL_GPIO_Write_Pin(GPIO_B,Pin_14,1);
 	MCAL_GPIO_Write_Pin(GPIO_B,Pin_15,1);
-	delay_ms(1000);
-	MCAL_GPIO_Write_Pin(GPIO_B,Pin_14,0);
-	MCAL_GPIO_Write_Pin(GPIO_B,Pin_15,0);
-	delay_ms(1000);
-	delay_ms(1000);
 	MCAL_GPIO_Write_Pin(GPIO_B,Pin_0,1);
 	MCAL_GPIO_Write_Pin(GPIO_B,Pin_1,1);
-	delay_ms(1000);
-	MCAL_GPIO_Write_Pin(GPIO_B,Pin_0,0);
-	MCAL_GPIO_Write_Pin(GPIO_B,Pin_1,0);
-	delay_ms(1000);
 }
 void System_Initialization(void)
 {

@@ -68,7 +68,8 @@ FLASH_State_t Flash_Erase_Pages(u8 Start_Page,u8 Pages_Number);
 *                          value as two halfwords.
 * Available via          : FLASH.c
 *****************************************************************************************/
-FLASH_State_t Flash_Write_Page(u8 Start_Page,u32 Data[]);
+FLASH_State_t Flash_Write_Page(u8 Page_Number,u32 Data[]);
+FLASH_State_t Flash_Write_Data(u32 Address,u32 Data);
 /********************************************************************
  *  END OF FILE:  FLASH.h
 ********************************************************************/

@@ -182,11 +182,11 @@ FLASH_State_t Flash_Erase_Pages(u8 Start_Page,u8 Pages_Number)
 *                          value as two halfwords.
 * Available via          : FLASH.c
 *****************************************************************************************/
-FLASH_State_t Flash_Write_Page(u8 Start_Page,u32 Data[]) 
+FLASH_State_t Flash_Write_Page(u8 Page_Number,u32 Data[]) 
 {
      u16 Counter = ZERO;
      FLASH_State_t Status = Flash_State_Ok;
-     u32 Address_Pointer = (Flash_Start + (Start_Page * Flash_Page_Size));
+     u32 Address_Pointer = (Flash_Start + (Page_Number * Flash_Page_Size));
      /* Unlock flash for write operations */
      Status = FLASH_Unlock();
      /* Loop through the data and write to flash memory */
@@ -201,6 +201,23 @@ FLASH_State_t Flash_Write_Page(u8 Start_Page,u32 Data[])
                Status = FLASH_Halfword_Write(Address_Pointer+2,(u16)(Data[Counter]>>16));
           }
           else {break;}
+     }
+     /* Lock flash after write operations */
+     FLASH_Lock();
+     return Status;
+}
+FLASH_State_t Flash_Write_Data(u32 Address,u32 Data) 
+{
+     FLASH_State_t Status = Flash_State_Ok;
+     /* Unlock flash for write operations */
+     if (FLASH_Unlock()==Flash_State_Ok)
+     {
+          /* Check if the lower 16 bits were written successfully before writing upper 16 bits */
+          if (FLASH_Halfword_Write(Address,(u16)(Data&0xFFFF))==Flash_State_Ok)
+          {
+               /* Write the upper 16 bits of Data[Counter] */
+               Status = FLASH_Halfword_Write(Address+2,(u16)(Data>>16));
+          }
      }
      /* Lock flash after write operations */
      FLASH_Lock();
