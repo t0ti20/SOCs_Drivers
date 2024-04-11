@@ -24,9 +24,9 @@
 ---------    Configure Macros    ---------
 *****************************************/
 //#define ENABLE_DEBUG
-#define Chip_ID_Number                  (123)
-#define Basic_SW_Major_Version          (0)
-#define Basic_SW_Minor_Version          (0)
+#define Default_Chip_ID_Number          (255)
+#define Default_SW_Major_Version        (255)
+#define Default_SW_Minor_Version        (255)
 #define Total_Services                  (6)
 #define Maximum_Buffer_Size             (255)
 /*****************************************
@@ -67,8 +67,9 @@ typedef enum Bootloader_Command_t
      Bootloader_Command_Send_Version         =(3),
      Bootloader_Command_Erase_Flash          =(4),
      Bootloader_Command_Flash_Application    =(5),
-     Bootloader_Command_Say_Hi               =(6),
-     Bootloader_Command_Address_Jump         =(7)
+     Bootloader_Command_Address_Jump         =(6),
+     Bootloader_Command_Say_Hi               =(7),
+     Bootloader_Command_Write_Data           =(8)
 }Bootloader_Command_t;
 /*****************************************
 ---  Application Programming Interface  --
@@ -102,6 +103,9 @@ void Bootloader_Start(void);
 * Return value    : None
 *****************************************************************************************/
 void Bootloader_Jump(void);
+
+void Bootloader_Set_Application_Version(u8 ID,u8 Major,u8 Minor);
+
 /********************************************************************
  *  END OF FILE:  Bootloader_Interface.h
 ********************************************************************/

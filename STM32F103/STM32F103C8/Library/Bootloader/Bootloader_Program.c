@@ -18,11 +18,11 @@
 /* UART Setting */
 static USART_Config_t UART_ONE={NULL,USART_1,USART_No_Parity,USART_Rx_Tx,Disable,USART_Eight_Bits,USART_One_Stop,USART_115200,USART_Disable_Interrupt};
 /* Major Version */
-static const u8 SW_Major_Version=Basic_SW_Major_Version;
+static u8 SW_Major_Version=Default_SW_Major_Version;
 /* Minor Version */
-static const u8 SW_Minor_Version=Basic_SW_Minor_Version;
+static u8 SW_Minor_Version=Default_SW_Minor_Version;
 /* Chip Configured ID */
-static const u8 Chip_ID=Chip_ID_Number;
+static u8 Chip_ID=Default_Chip_ID_Number;
 /* UART Buffer */
 static u8 UART_Buffer[Maximum_Buffer_Size];
 /*****************************************
@@ -389,6 +389,37 @@ static void Bootloader_Address_Jump(void)
 	}
 }
 
+static void Bootloader_Say_Hello(void)
+{
+	/* Send ACK And Frame Size */
+	Bootloader_Send_Frame(ZERO);
+	/* Debug Information */
+	#ifdef ENABLE_DEBUG
+		Bootloader_Send_Message("Done Sending 3 Elements Of Vesrion\n");
+	#endif
+}
+static void Bootloader_Write_Data(void)
+{
+	u32 Desired_Address=(*(u32*)(UART_Buffer+2));
+	u32 Desired_Data=(*(u32*)(UART_Buffer+6));
+	/* Check For Pages It Its For Application Region */
+	if((Desired_Address>=Memory_Base)&&(Desired_Address<(Memory_Size+Memory_Base)))
+	{
+		/* Erase Needed Pages */
+		if(Flash_State_Ok==Flash_Write_Data(Desired_Address,Desired_Data))
+		{
+			/* Send ACK Done Erasing */
+			Bootloader_Send_ACK();
+		}
+		/* Send NACK Erasing Failed */
+		else{Bootloader_Send_NACK();}
+	}
+	else
+	{
+		/* Send NACK Erasing Failed */
+		Bootloader_Send_NACK();
+	}
+}
 /*****************************************************************************************
 * Function Name   : Bootloader_Check_Command
 * Description     : Checks and executes the received bootloader command.
@@ -407,6 +438,8 @@ static Bootloader_State_t Bootloader_Check_Command(void)
 		case Bootloader_Command_Erase_Flash:Bootloader_Erase_Flash();break;
 		case Bootloader_Command_Flash_Application:Bootloader_Write_Flash();break;
 		case Bootloader_Command_Address_Jump:Bootloader_Address_Jump();break;
+		case Bootloader_Command_Say_Hi:Bootloader_Say_Hello();break;
+		case Bootloader_Command_Write_Data:Bootloader_Write_Data();break;
 		default : Return=Bootloader_State_Wrong_Command;break;
 	}
 	return Return;
@@ -453,12 +486,6 @@ static Bootloader_State_t Bootloader_Receive_Command(void)
 	}
 	return Return;
 }
-
-static void Bootloader_Say_Hello(void)
-{
-	/* Send NACK Code Throw UART */
-	USART_Transmit(&UART_ONE,(u16)Bootloader_State_NACK);
-}
 /*****************************************
 ------------  APIs Functions  ------------
 *****************************************/
@@ -501,10 +528,14 @@ void Bootloader_Start(void)
 		/* Wait Till Receiving Command From Host */
 		Bootloader_Receive_Command();
 	}
-	else
+	else if((Application_Base)[0]!=0xffffffff)
 	{
 		/* Start Flashed Application */
 		Bootloader_Start_Application(Application_Base);
+	}
+	else
+	{
+		Bootloader_Receive_Command();
 	}
 }
 
@@ -523,6 +554,15 @@ void Bootloader_Initialize(void)
 	CRC_Initialization();
 }
 
+void Bootloader_Set_Application_Version(u8 ID,u8 Major,u8 Minor)
+{
+	/* Major Version */
+	SW_Major_Version=Major;
+	/* Minor Version */
+	SW_Minor_Version=Minor;
+	/* Chip Configured ID */
+	Chip_ID=ID;
+}
 /********************************************************************
  *  END OF FILE:  Bootloader.c
 ********************************************************************/
