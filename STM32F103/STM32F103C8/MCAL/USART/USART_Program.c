@@ -191,7 +191,7 @@ USART_IRQHandler(1)
 {
      u16 Data=ZERO;
      /*Read data register not empty*/
-     if(USART1.CR1.Bits.Bit_5)
+     if(USART1.CR1.Bits.Bit_5&&USART1.SR.Bits.Bit_5)
      {
           /*9 Bit Data No Parity*/
           if((USART1.CR1.Bits.Bit_12==USART_Nine_Bits)&&(Get_Bits(USART1.CR1.Register,NINE,TWO)==USART_No_Parity))Data=USART1.DR.Register&0x1ff;

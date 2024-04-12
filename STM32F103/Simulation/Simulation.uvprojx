@@ -419,11 +419,6 @@
               <FileType>1</FileType>
               <FilePath>..\STM32F103C8\MCAL\NVIC\NVIC_Program.c</FilePath>
             </File>
-            <File>
-              <FileName>Bootloader.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\STM32F103C8\Library\Bootloader\Bootloader.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

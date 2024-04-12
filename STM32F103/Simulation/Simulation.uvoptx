@@ -156,7 +156,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
+          <Filename>Z:\home\t0ti20\Desktop\VS-Code\GitHub\SOCs_Drivers\STM32F103\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\STM32F103C8\Library/Bootloader/Bootloader.c\40</Expression>
         </Bp>
@@ -172,7 +172,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
+          <Filename>Z:\home\t0ti20\Desktop\VS-Code\GitHub\SOCs_Drivers\STM32F103\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\STM32F103C8\Library/Bootloader/Bootloader.c\35</Expression>
         </Bp>
@@ -188,7 +188,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
+          <Filename>Z:\home\t0ti20\Desktop\VS-Code\GitHub\SOCs_Drivers\STM32F103\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\STM32F103C8\Library/Bootloader/Bootloader.c\34</Expression>
         </Bp>
@@ -204,7 +204,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
+          <Filename>Z:\home\t0ti20\Desktop\VS-Code\GitHub\SOCs_Drivers\STM32F103\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\STM32F103C8\Library/Bootloader/Bootloader.c\33</Expression>
         </Bp>
@@ -220,7 +220,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
+          <Filename>Z:\home\t0ti20\Desktop\VS-Code\GitHub\SOCs_Drivers\STM32F103\STM32F103C8\Library\Bootloader\Bootloader.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\STM32F103C8\Library/Bootloader/Bootloader.c\23</Expression>
         </Bp>
@@ -438,18 +438,6 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\STM32F103C8\MCAL\NVIC\NVIC_Program.c</PathWithFileName>
       <FilenameWithoutPath>NVIC_Program.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>8</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\STM32F103C8\Library\Bootloader\Bootloader.c</PathWithFileName>
-      <FilenameWithoutPath>Bootloader.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
