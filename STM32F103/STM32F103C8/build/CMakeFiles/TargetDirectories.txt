@@ -1,0 +1,6 @@
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/build/CMakeFiles/Test.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/build/CMakeFiles/flash.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/build/CMakeFiles/erase.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/build/CMakeFiles/read.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/build/CMakeFiles/edit_cache.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/build/CMakeFiles/rebuild_cache.dir

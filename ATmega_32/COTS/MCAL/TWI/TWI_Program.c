@@ -1,8 +1,8 @@
 /*------------------------------- INCLUDE -------------------------------*/
-#include "../../Library/Macros.h"
-#include "../../Library/Standard_Types.h"
-#include "../../MCAL/TWI/TWI_Interface.h"
-#include "../../MCAL/TWI/TWI_Private.h"
+#include "Macros.h"
+#include "Standard_Types.h"
+#include "TWI_Interface.h"
+#include "TWI_Private.h"
 /*------------------------- GIE Enable -------------------------*/
 void TWI_VidInitialization(u8 Copy_u8Master_Slave,u8 Copy_u8Adress)
 {

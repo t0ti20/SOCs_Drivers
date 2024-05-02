@@ -1,0 +1,7 @@
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/Test.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/strip.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/hex.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/eeprom.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/flash.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/edit_cache.dir
+/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/ATmega_32/ATmega_32/build/CMakeFiles/rebuild_cache.dir

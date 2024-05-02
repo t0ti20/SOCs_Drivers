@@ -1,0 +1,1689 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Test"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 67,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 77,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu99 -Og -g -gdwarf-4 -mthumb -g2 -fno-builtin -mcpu=cortex-m3 -Wall  -ffunction-sections -fdata-sections -fomit-frame-pointer -mabi=aapcs -fno-unroll-loops -ffast-math -ftree-vectorize -mlong-calls -g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Application"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/EEPROM"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/Keypad"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/LCD"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/Seven_Segment"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/Bootloader"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/Cortex_M3/Headers"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/MCU"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/RTOS/Queue"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/RTOS"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/CRC"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/EXTI"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/FLASH"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/GPIO"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/I2C"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/NVIC"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/RCC"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/SPI"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/USART"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Application"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/EEPROM"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/Keypad"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/LCD"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/Seven_Segment"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/Bootloader"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/Cortex_M3/Headers"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/MCU"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/RTOS/Queue"
+				},
+				{
+					"backtrace" : 32,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/RTOS"
+				},
+				{
+					"backtrace" : 33,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/CRC"
+				},
+				{
+					"backtrace" : 34,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/EXTI"
+				},
+				{
+					"backtrace" : 35,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/FLASH"
+				},
+				{
+					"backtrace" : 36,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/GPIO"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/I2C"
+				},
+				{
+					"backtrace" : 38,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/NVIC"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/RCC"
+				},
+				{
+					"backtrace" : 40,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/SPI"
+				},
+				{
+					"backtrace" : 41,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/USART"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/MCAL/RCC"
+				},
+				{
+					"backtrace" : 43,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/MCAL/SPI"
+				},
+				{
+					"backtrace" : 44,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/MCAL/USART"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -mthumb -g2 -mcpu=cortex-m3 -g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Application"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/EEPROM"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/Keypad"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/LCD"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/HAL/Seven_Segment"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/Bootloader"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/Cortex_M3/Headers"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/MCU"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/RTOS/Queue"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/Library/RTOS"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/CRC"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/EXTI"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/FLASH"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/GPIO"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/I2C"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/NVIC"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/RCC"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/SPI"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Include/MCAL/USART"
+				},
+				{
+					"backtrace" : 22,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Application"
+				},
+				{
+					"backtrace" : 23,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/EEPROM"
+				},
+				{
+					"backtrace" : 24,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/Keypad"
+				},
+				{
+					"backtrace" : 25,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/LCD"
+				},
+				{
+					"backtrace" : 26,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/HAL/Seven_Segment"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/Bootloader"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/Cortex_M3/Headers"
+				},
+				{
+					"backtrace" : 29,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/MCU"
+				},
+				{
+					"backtrace" : 30,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library"
+				},
+				{
+					"backtrace" : 31,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/RTOS/Queue"
+				},
+				{
+					"backtrace" : 32,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/Library/RTOS"
+				},
+				{
+					"backtrace" : 33,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/CRC"
+				},
+				{
+					"backtrace" : 34,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/EXTI"
+				},
+				{
+					"backtrace" : 35,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/FLASH"
+				},
+				{
+					"backtrace" : 36,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/GPIO"
+				},
+				{
+					"backtrace" : 37,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/I2C"
+				},
+				{
+					"backtrace" : 38,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/NVIC"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/RCC"
+				},
+				{
+					"backtrace" : 40,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/SPI"
+				},
+				{
+					"backtrace" : 41,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/OLD/MCAL/USART"
+				},
+				{
+					"backtrace" : 42,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/MCAL/RCC"
+				},
+				{
+					"backtrace" : 43,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/MCAL/SPI"
+				},
+				{
+					"backtrace" : 44,
+					"path" : "/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/MCAL/USART"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				6
+			]
+		}
+	],
+	"id" : "Test::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=gnu99 -Og -g -gdwarf-4 -mthumb -g2 -fno-builtin -mcpu=cortex-m3 -Wall  -ffunction-sections -fdata-sections -fomit-frame-pointer -mabi=aapcs -fno-unroll-loops -ffast-math -ftree-vectorize -mlong-calls -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,--gc-sections --specs=nano.specs --specs=nosys.specs -mthumb -g2 -mcpu=cortex-m0plus -mabi=aapcs -T/home/t0ti20/Desktop/VS-Code/GitHub/SOCs_Drivers/STM32F103/STM32F103C8/Source/Library/Cortex_M3/Linker_Script.ld -Wl,-Map=Test.map",
+				"role" : "flags"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "Test",
+	"nameOnDisk" : "Test",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				6
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Application/Application.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/HAL/EEPROM/EEPROM_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/HAL/Keypad/Keypad_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/HAL/LCD/LCD_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/HAL/Seven_Segment/Seven_Segment_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Library/Bootloader/Bootloader_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Source/Library/Cortex_M3/Startup.s",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Library/Cortex_M3/System_Init.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Library/RTOS/Queue/Queue.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Library/RTOS/RTOS.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Library/RTOS/RTOS_Porting.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/Library/RTOS/RTOS_Scheduler.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/CRC/CRC.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/EXTI/EXTI_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/FLASH/FLASH.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/GPIO/GPIO_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/I2C/I2C_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/NVIC/NVIC_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/RCC/RCC_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/SPI/SPI_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Source/MCAL/USART/USART_Program.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 45,
+			"path" : "Include/Application/Application.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 46,
+			"path" : "Include/HAL/EEPROM/EEPROM_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 47,
+			"path" : "Include/HAL/Keypad/Keypad_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 48,
+			"path" : "Include/HAL/LCD/LCD_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 49,
+			"path" : "Include/HAL/Seven_Segment/Seven_Segment_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 50,
+			"path" : "Include/Library/Bootloader/Bootloader_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 51,
+			"path" : "Include/Library/Cortex_M3/Headers/cmsis_armcc_V6.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 52,
+			"path" : "Include/Library/Cortex_M3/Headers/cmsis_gcc.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 53,
+			"path" : "Include/Library/Cortex_M3/Headers/core_cm3.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 54,
+			"path" : "Include/Library/Cortex_M3/Headers/core_cmFunc.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 55,
+			"path" : "Include/Library/Cortex_M3/Headers/core_cmInstr.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 56,
+			"path" : "Include/Library/Cortex_M3/Headers/core_cmSimd.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 57,
+			"path" : "Include/Library/Cortex_M3/Headers/stm32f103xb.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 58,
+			"path" : "Include/Library/Cortex_M3/Headers/stm32f1xx.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 59,
+			"path" : "Include/Library/Cortex_M3/Headers/system_stm32f10x.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 60,
+			"path" : "Include/Library/Cortex_M3/Headers/system_stm32f1xx.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 61,
+			"path" : "Include/Library/MCU/STM32F103.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 62,
+			"path" : "Include/Library/Macros.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 63,
+			"path" : "Include/Library/RTOS/Queue/Queue.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 64,
+			"path" : "Include/Library/RTOS/RTOS.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 65,
+			"path" : "Include/Library/RTOS/RTOS_Porting.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 66,
+			"path" : "Include/Library/RTOS/RTOS_Scheduler.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 67,
+			"path" : "Include/Library/Standard_Types.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 68,
+			"path" : "Include/MCAL/CRC/CRC.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 69,
+			"path" : "Include/MCAL/EXTI/EXTI_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 70,
+			"path" : "Include/MCAL/FLASH/FLASH.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 71,
+			"path" : "Include/MCAL/GPIO/GPIO_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 72,
+			"path" : "Include/MCAL/I2C/I2C_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 73,
+			"path" : "Include/MCAL/NVIC/NVIC_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 74,
+			"path" : "Include/MCAL/RCC/RCC_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 75,
+			"path" : "Include/MCAL/SPI/SPI_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 76,
+			"path" : "Include/MCAL/USART/USART_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 77,
+			"path" : "OLD/Application/Application.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 78,
+			"path" : "OLD/HAL/EEPROM/EEPROM_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 79,
+			"path" : "OLD/HAL/Keypad/Keypad_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 80,
+			"path" : "OLD/HAL/LCD/LCD_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 81,
+			"path" : "OLD/HAL/Seven_Segment/Seven_Segment_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 82,
+			"path" : "OLD/Library/Bootloader/Bootloader_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 83,
+			"path" : "OLD/Library/Cortex_M3/Headers/cmsis_armcc_V6.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 84,
+			"path" : "OLD/Library/Cortex_M3/Headers/cmsis_gcc.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 85,
+			"path" : "OLD/Library/Cortex_M3/Headers/core_cm3.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 86,
+			"path" : "OLD/Library/Cortex_M3/Headers/core_cmFunc.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 87,
+			"path" : "OLD/Library/Cortex_M3/Headers/core_cmInstr.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 88,
+			"path" : "OLD/Library/Cortex_M3/Headers/core_cmSimd.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 89,
+			"path" : "OLD/Library/Cortex_M3/Headers/stm32f103xb.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 90,
+			"path" : "OLD/Library/Cortex_M3/Headers/stm32f1xx.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 91,
+			"path" : "OLD/Library/Cortex_M3/Headers/system_stm32f10x.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 92,
+			"path" : "OLD/Library/Cortex_M3/Headers/system_stm32f1xx.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 93,
+			"path" : "OLD/Library/MCU/STM32F103.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 94,
+			"path" : "OLD/Library/Macros.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 95,
+			"path" : "OLD/Library/RTOS/Queue/Queue.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 96,
+			"path" : "OLD/Library/RTOS/RTOS.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 97,
+			"path" : "OLD/Library/RTOS/RTOS_Porting.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 98,
+			"path" : "OLD/Library/RTOS/RTOS_Scheduler.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 99,
+			"path" : "OLD/Library/Standard_Types.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 100,
+			"path" : "OLD/MCAL/CRC/CRC.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 101,
+			"path" : "OLD/MCAL/EXTI/EXTI_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 102,
+			"path" : "OLD/MCAL/FLASH/FLASH.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 103,
+			"path" : "OLD/MCAL/GPIO/GPIO_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 104,
+			"path" : "OLD/MCAL/I2C/I2C_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 105,
+			"path" : "OLD/MCAL/NVIC/NVIC_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 106,
+			"path" : "OLD/MCAL/RCC/RCC_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 107,
+			"path" : "OLD/MCAL/SPI/SPI_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 108,
+			"path" : "OLD/MCAL/USART/USART_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 109,
+			"path" : "Source/MCAL/RCC/RCC_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 110,
+			"path" : "Source/MCAL/SPI/SPI_Interface.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 111,
+			"path" : "Source/MCAL/USART/USART_Interface.h",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "EXECUTABLE"
+}

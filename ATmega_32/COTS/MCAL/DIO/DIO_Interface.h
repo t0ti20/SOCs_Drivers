@@ -2,7 +2,8 @@
 #ifndef DIO_INTERFACE_H_
 #define DIO_INTERFACE_H_
 /*Include*/
-#include "../../Library/Macros.h"
+#include "Macros.h"
+#include "Standard_Types.h"
 #include "DIO_Private.h"
 /*OPTIONS FOR SINGLE BIN*/
 void DIO_VidInternal_Pin_Bull_Up(u8 Copy_u8Port,u8 Copy_u8Pin);							/*INTERNAL PIN PULL UP (Port,Pin) */

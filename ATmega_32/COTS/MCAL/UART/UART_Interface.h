@@ -2,8 +2,8 @@
 #ifndef UART_INTERFACE_H_
 #define UART_INTERFACE_H_
 /*------------------------------- INCLUDE -------------------------------*/
-#include "../../Library/Macros.h"
-#include "../../Library/Standard_Types.h"
+#include "Macros.h"
+#include "Standard_Types.h"
 #include "UART_Config.h"
 #include "UART_Private.h"
 #include "DIO_Interface.h"

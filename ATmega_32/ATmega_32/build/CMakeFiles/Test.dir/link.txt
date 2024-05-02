@@ -1,0 +1,1 @@
+/usr/bin/avr-g++ -mmcu=atmega32 -g -ggdb -DF_CPU=8000000 -DBAUDRATE=9600 -Os -lm -lprintf_flt -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -Wno-unused-include-directive -g CMakeFiles/Test.dir/Source/Application/Application.cpp.obj CMakeFiles/Test.dir/Source/MCAL/GPIO/GPIO.cpp.obj -o Test.elf 
